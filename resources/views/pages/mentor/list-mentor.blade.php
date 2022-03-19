@@ -5,7 +5,7 @@
 
 @section('content')
 {{-- Page Banner START --> --}}
-<section class="bg-blue align-items-center d-flex" style="background:url(assets/images/pattern/04.png) no-repeat center center; background-size:cover;">
+<section class="bg-blue align-items-center d-flex" style="background:url({{ url('template/assets/images/pattern/04.png')}}) no-repeat center center; background-size:cover;">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 text-center">
