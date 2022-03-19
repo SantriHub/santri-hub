@@ -382,7 +382,7 @@ Popular course START -->
                                         <a href="#" class="h6 mb-0"><i class="far fa-heart"></i></a>
                                     </div> --}}
                                     <!-- Title -->
-                                    <h5 class="card-title fw-normal"><a href="#">Institut Teknologi Bandung</a></h5>
+                                    <h5 class="card-title fw-normal"><a href="/kampus/itb/list-mentor">Institut Teknologi Bandung</a></h5>
                                     <p class="mb-2 text-truncate-2">Proposal indulged no do sociable he throwing settling.</p>
                                     <!-- Rating star -->
                                     <ul class="list-inline mb-0">
