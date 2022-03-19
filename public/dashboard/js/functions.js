@@ -109,7 +109,7 @@ var e = {
             e.backTotop(),
             e.lightBox(),
             e.enableIsotope(),
-            e.choicesSelect(),
+            // e.choicesSelect(),
             e.aosFunc(),
             e.dashboardChart(),
             e.earningChart(),
@@ -622,42 +622,42 @@ var e = {
     // END: Isotope
 
     // START: 12 Choices
-    choicesSelect: function () {
-        var choice = e.select(".js-choice");
+    // choicesSelect: function () {
+    //     var choice = e.select(".js-choice");
 
-        if (e.isVariableDefined(choice)) {
-            var element = document.querySelectorAll(".js-choice");
+    //     if (e.isVariableDefined(choice)) {
+    //         var element = document.querySelectorAll(".js-choice");
 
-            element.forEach(function (item) {
-                var removeItemBtn =
-                    item.getAttribute("data-remove-item-button") == "true"
-                        ? true
-                        : false;
-                var placeHolder =
-                    item.getAttribute("data-placeholder") == "false"
-                        ? false
-                        : true;
-                var placeHolderVal = item.getAttribute("data-placeholder-val")
-                    ? item.getAttribute("data-placeholder-val")
-                    : "Type and hit enter";
-                var maxItemCount = item.getAttribute("data-max-item-count")
-                    ? item.getAttribute("data-max-item-count")
-                    : 3;
-                var searchEnabled =
-                    item.getAttribute("data-search-enabled") == "false"
-                        ? false
-                        : true;
+    //         element.forEach(function (item) {
+    //             var removeItemBtn =
+    //                 item.getAttribute("data-remove-item-button") == "true"
+    //                     ? true
+    //                     : false;
+    //             var placeHolder =
+    //                 item.getAttribute("data-placeholder") == "false"
+    //                     ? false
+    //                     : true;
+    //             var placeHolderVal = item.getAttribute("data-placeholder-val")
+    //                 ? item.getAttribute("data-placeholder-val")
+    //                 : "Type and hit enter";
+    //             var maxItemCount = item.getAttribute("data-max-item-count")
+    //                 ? item.getAttribute("data-max-item-count")
+    //                 : 3;
+    //             var searchEnabled =
+    //                 item.getAttribute("data-search-enabled") == "false"
+    //                     ? false
+    //                     : true;
 
-                var choices = new Choices(item, {
-                    removeItemButton: removeItemBtn,
-                    placeholder: placeHolder,
-                    placeholderValue: placeHolderVal,
-                    maxItemCount: maxItemCount,
-                    searchEnabled: searchEnabled,
-                });
-            });
-        }
-    },
+    //             var choices = new Choices(item, {
+    //                 removeItemButton: removeItemBtn,
+    //                 placeholder: placeHolder,
+    //                 placeholderValue: placeHolderVal,
+    //                 maxItemCount: maxItemCount,
+    //                 searchEnabled: searchEnabled,
+    //             });
+    //         });
+    //     }
+    // },
     // END: Choices
 
     // START: 13 AOS Animation
