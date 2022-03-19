@@ -6,7 +6,7 @@
 @section('content')
 <section class="pt-0">
 	<div class="container-fluid px-0">
-		<div class="card bg-blue h-100px h-md-200px rounded-0" style="background:url(assets/images/pattern/04.png) no-repeat center center; background-size:cover;">
+		<div class="card bg-blue h-100px h-md-200px rounded-0" style="background:url({{ url('template/assets/images/pattern/04.png')}}) no-repeat center center; background-size:cover;">
 		</div>
 	</div>
 	<div class="container mt-n4">
@@ -206,7 +206,7 @@ Page content START -->
 											<div class="d-flex align-items-center">
 												<!-- Image -->
 												<div class="w-100px">
-													<img src="assets/images/courses/4by3/08.jpg" class="rounded" alt="">
+													<img src="{{ url('template/assets/images/courses/4by3/08.jpg')}}" class="rounded" alt="">
 												</div>
 												<div class="mb-0 ms-2">
 													<!-- Title -->
@@ -242,7 +242,7 @@ Page content START -->
 											<div class="d-flex align-items-center">
 												<!-- Image -->
 												<div class="w-100px">
-													<img src="assets/images/courses/4by3/03.jpg" class="rounded" alt="">
+													<img src="{{ url('template/assets/images/courses/4by3/03.jpg')}}" class="rounded" alt="">
 												</div>
 												<div class="mb-0 ms-2">
 													<!-- Title -->
@@ -279,7 +279,7 @@ Page content START -->
 											<div class="d-flex align-items-center">
 												<!-- Image -->
 												<div class="w-100px">
-													<img src="assets/images/courses/4by3/05.jpg" class="rounded" alt="">
+													<img src="{{ url('template/assets/images/courses/4by3/05.jpg')}}" class="rounded" alt="">
 												</div>
 												<div class="mb-0 ms-2">
 													<!-- Title -->
@@ -315,7 +315,7 @@ Page content START -->
 											<div class="d-flex align-items-center">
 												<!-- Image -->
 												<div class="w-100px">
-													<img src="assets/images/courses/4by3/01.jpg" class="rounded" alt="">
+													<img src="{{ url('template/assets/images/courses/4by3/01.jpg')}}" class="rounded" alt="">
 												</div>
 												<div class="mb-0 ms-2">
 													<!-- Title -->
@@ -350,7 +350,7 @@ Page content START -->
 											<div class="d-flex align-items-center">
 												<!-- Image -->
 												<div class="w-100px">
-													<img src="assets/images/courses/4by3/02.jpg" class="rounded" alt="">
+													<img src="{{ url('template/assets/images/courses/4by3/02.jpg')}}" class="rounded" alt="">
 												</div>
 												<div class="mb-0 ms-2">
 													<!-- Title -->
