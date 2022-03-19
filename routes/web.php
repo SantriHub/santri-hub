@@ -36,3 +36,10 @@ Route::get('/dashboard/mentor', function () {
 Route::get('/dashboard/member', function () {
     return view('pages.dashboard-member');
 });
+
+Route::get('/kampus/itb/list-mentor', function () {
+    return view('pages.mentor.list-mentor');
+});
+Route::get('/kampus/itb/ahmad-fulan', function () {
+    return view('pages.mentor.detail-mentor');
+});
