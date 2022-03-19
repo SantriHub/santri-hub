@@ -88,7 +88,7 @@ Page content START -->
 								<a href="#" class="h6 fw-light mb-0"><i class="far fa-heart"></i></a> --}}
 							</div>
 							<!-- Title -->
-							<h5 class="card-title"><a href="#">Ahmad Fulan</a></h5>
+							<h5 class="card-title"><a href="/kampus/itb/ahmad-fulan">Ahmad Fulan</a></h5>
 							<p class="mb-2 text-truncate-2">Proposal indulged no do sociable he throwing settling.</p>
 							<!-- Rating star -->
 							<ul class="list-inline mb-0">
