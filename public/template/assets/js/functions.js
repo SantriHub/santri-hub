@@ -109,7 +109,7 @@ var e = {
             e.backTotop(),
             e.lightBox(),
             e.enableIsotope(),
-            e.choicesSelect(),
+            // e.choicesSelect(),
             e.aosFunc(),
             e.dashboardChart(),
             e.earningChart(),
@@ -121,7 +121,7 @@ var e = {
             e.quill(),
             e.stepper(),
             e.videoPlyr(),
-            e.darkMode(),
+            // e.darkMode(),
             e.pricing(),
             e.stickyElement(),
             e.overlayScrollbars();
@@ -622,42 +622,42 @@ var e = {
     // END: Isotope
 
     // START: 12 Choices
-    choicesSelect: function () {
-        var choice = e.select(".js-choice");
+    // choicesSelect: function () {
+    //     var choice = e.select(".js-choice");
 
-        if (e.isVariableDefined(choice)) {
-            var element = document.querySelectorAll(".js-choice");
+    //     if (e.isVariableDefined(choice)) {
+    //         var element = document.querySelectorAll(".js-choice");
 
-            element.forEach(function (item) {
-                var removeItemBtn =
-                    item.getAttribute("data-remove-item-button") == "true"
-                        ? true
-                        : false;
-                var placeHolder =
-                    item.getAttribute("data-placeholder") == "false"
-                        ? false
-                        : true;
-                var placeHolderVal = item.getAttribute("data-placeholder-val")
-                    ? item.getAttribute("data-placeholder-val")
-                    : "Type and hit enter";
-                var maxItemCount = item.getAttribute("data-max-item-count")
-                    ? item.getAttribute("data-max-item-count")
-                    : 3;
-                var searchEnabled =
-                    item.getAttribute("data-search-enabled") == "false"
-                        ? false
-                        : true;
+    //         element.forEach(function (item) {
+    //             var removeItemBtn =
+    //                 item.getAttribute("data-remove-item-button") == "true"
+    //                     ? true
+    //                     : false;
+    //             var placeHolder =
+    //                 item.getAttribute("data-placeholder") == "false"
+    //                     ? false
+    //                     : true;
+    //             var placeHolderVal = item.getAttribute("data-placeholder-val")
+    //                 ? item.getAttribute("data-placeholder-val")
+    //                 : "Type and hit enter";
+    //             var maxItemCount = item.getAttribute("data-max-item-count")
+    //                 ? item.getAttribute("data-max-item-count")
+    //                 : 3;
+    //             var searchEnabled =
+    //                 item.getAttribute("data-search-enabled") == "false"
+    //                     ? false
+    //                     : true;
 
-                var choices = new Choices(item, {
-                    removeItemButton: removeItemBtn,
-                    placeholder: placeHolder,
-                    placeholderValue: placeHolderVal,
-                    maxItemCount: maxItemCount,
-                    searchEnabled: searchEnabled,
-                });
-            });
-        }
-    },
+    //             var choices = new Choices(item, {
+    //                 removeItemButton: removeItemBtn,
+    //                 placeholder: placeHolder,
+    //                 placeholderValue: placeHolderVal,
+    //                 maxItemCount: maxItemCount,
+    //                 searchEnabled: searchEnabled,
+    //             });
+    //         });
+    //     }
+    // },
     // END: Choices
 
     // START: 13 AOS Animation
@@ -1175,56 +1175,56 @@ var e = {
     // END: Video player
 
     // START: 24 Dark mode
-    darkMode: function () {
-        let theme = localStorage.getItem("data-theme");
-        var style = document.getElementById("style-switch");
-        var dir = document.getElementsByTagName("html")[0].getAttribute("dir");
+    // darkMode: function () {
+    //     let theme = localStorage.getItem("data-theme");
+    //     var style = document.getElementById("style-switch");
+    //     var dir = document.getElementsByTagName("html")[0].getAttribute("dir");
 
-        var changeThemeToDark = () => {
-            document.documentElement.setAttribute("data-theme", "dark"); // set theme to dark
-            if (dir == "rtl") {
-                style.setAttribute(
-                    "href",
-                    "template/assets/css/style-dark-rtl.css"
-                );
-            } else {
-                style.setAttribute(
-                    "href",
-                    "template/assets/css/style-dark.css"
-                );
-            }
-            localStorage.setItem("data-theme", "dark"); // save theme to local storage
-        };
+    //     var changeThemeToDark = () => {
+    //         document.documentElement.setAttribute("data-theme", "dark"); // set theme to dark
+    //         if (dir == "rtl") {
+    //             style.setAttribute(
+    //                 "href",
+    //                 "template/assets/css/style-dark-rtl.css"
+    //             );
+    //         } else {
+    //             style.setAttribute(
+    //                 "href",
+    //                 "template/assets/css/style-dark.css"
+    //             );
+    //         }
+    //         localStorage.setItem("data-theme", "dark"); // save theme to local storage
+    //     };
 
-        var changeThemeToLight = () => {
-            document.documentElement.setAttribute("data-theme", "light"); // set theme light
-            if (dir == "rtl") {
-                style.setAttribute("href", "template/assets/css/style-rtl.css");
-            } else {
-                style.setAttribute("href", "template/assets/css/style.css");
-            }
+    //     var changeThemeToLight = () => {
+    //         document.documentElement.setAttribute("data-theme", "light"); // set theme light
+    //         if (dir == "rtl") {
+    //             style.setAttribute("href", "template/assets/css/style-rtl.css");
+    //         } else {
+    //             style.setAttribute("href", "template/assets/css/style.css");
+    //         }
 
-            localStorage.setItem("data-theme", "light"); // save theme to local storage
-        };
+    //         localStorage.setItem("data-theme", "light"); // save theme to local storage
+    //     };
 
-        if (theme === "dark") {
-            changeThemeToDark();
-        } else if (theme == null || theme === "light") {
-            changeThemeToLight();
-        }
+    //     if (theme === "dark") {
+    //         changeThemeToDark();
+    //     } else if (theme == null || theme === "light") {
+    //         changeThemeToLight();
+    //     }
 
-        const dms = e.select("#darkModeSwitch");
-        if (e.isVariableDefined(dms)) {
-            dms.addEventListener("click", () => {
-                let theme = localStorage.getItem("data-theme"); // Retrieve saved them from local storage
-                if (theme === "dark") {
-                    changeThemeToLight();
-                } else {
-                    changeThemeToDark();
-                }
-            });
-        }
-    },
+    //     const dms = e.select("#darkModeSwitch");
+    //     if (e.isVariableDefined(dms)) {
+    //         dms.addEventListener("click", () => {
+    //             let theme = localStorage.getItem("data-theme"); // Retrieve saved them from local storage
+    //             if (theme === "dark") {
+    //                 changeThemeToLight();
+    //             } else {
+    //                 changeThemeToDark();
+    //             }
+    //         });
+    //     }
+    // },
     // END: Dark mode
 
     // START: 25 Pricing
