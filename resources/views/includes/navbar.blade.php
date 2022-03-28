@@ -19,7 +19,7 @@
                 </button>
 
                 <!-- Main navbar START -->
-                <div class="navbar-collapse w-100 collapse" id="navbarCollapse">
+                <div class="navbar-collapse  w-100 collapse" id="navbarCollapse">
 
                     <!-- Nav category menu START -->
                     <ul class="navbar-nav navbar-nav-scroll me-auto">
@@ -56,8 +56,17 @@
                         </li>
 
                         <!-- Nav item 5 link-->
-                        <a class="nav-link" href="#"  aria-expanded="false">Blog</a>
+                        <li class="nav-item dropdown dropdown-fullwidth">
+                            <a class="nav-link" href="#"  aria-expanded="false">Blog</a>
+                        </li>
+                        <li class="nav-item dropdown  dropdown-menu-shadow-stacked" style="margin-left: 5px">
+                            <a class="nav-link border border-primary rounded text-black px-3 py-3 py-xl-0" href="/login"><span>Login</span></a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-menu-shadow-stacked " style="margin-left: 5px">
+                            <a class="nav-link bg-primary bg-opacity-9 rounded-3 text-white px-3 py-3 py-xl-0" href="/register" id="categoryMenu" aria-haspopup="true" aria-expanded="false"><span>Register</span></a>
+                        </li>
                     </li>
+
                     </ul>
                     <!-- Nav Main menu END -->
 
@@ -94,16 +103,11 @@
                             <hr class="dropdown-divider">
                         </li>
                         <!-- Dark mode switch START -->
-                        {{-- <li>
-                            <div class="modeswitch-wrap" id="darkModeSwitch">
-                                <div class="modeswitch-item">
-                                    <div class="modeswitch-icon"></div>
-                                </div>
-                                <span>Dark mode</span>
-                            </div>
-                        </li> --}}
                         <!-- Dark mode switch END -->
                     </ul>
+                </div>
+                <div class="dropdown ms-1 ms-lg-0" hidden>
+                    <button onclick="window.location.href='/login'" class="text-black btn btn-info-soft mb-0 fw-bold"><i class="fas fa-sign-in-alt me-2"></i>Login</button>
                 </div>
                 <!-- Profile START -->
             </div>
