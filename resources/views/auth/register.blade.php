@@ -57,49 +57,73 @@
 							<p class="lead mb-4">Nice to see you! Please Sign up with your account.</p>
 						
 							<!-- Form START -->
-							<form>
+							<form action="/register", method="POST">
+								@csrf
+								<!-- Name -->
+								<div class="mb-4">
+									<label for="exampleInputEmail1" class="form-label">Nama</label>
+									<div class="input-group input-group-lg">
+										<span class="input-group-text bg-light rounded-start border-0 text-secondary px-3"><i class="bi bi-person-fill"></i></span>
+										<input type="text" class="form-control border-0 bg-light rounded-end ps-1 @error('name') is-invalid @enderror " name="name" placeholder="Nama" id="exampleInputEmail1" value=" {{old('name')}} ">
+										@error('name')
+										<div class="invalid-feedback">
+											{{$message}}
+										  </div>
+										@enderror
+									</div>
+								</div>
 								<!-- Email -->
 								<div class="mb-4">
-									<label for="exampleInputEmail1" class="form-label">Email address *</label>
+									<label for="exampleInputEmail1" class="form-label">Email</label>
 									<div class="input-group input-group-lg">
 										<span class="input-group-text bg-light rounded-start border-0 text-secondary px-3"><i class="bi bi-envelope-fill"></i></span>
-										<input type="email" class="form-control border-0 bg-light rounded-end ps-1" placeholder="E-mail" id="exampleInputEmail1">
+										<input type="email" class="form-control border-0 bg-light rounded-end ps-1  @error('email') is-invalid @enderror "  name="email" placeholder="E-mail" id="exampleInputEmail1" value=" {{old('email')}} ">
+										@error('email')
+										<div class="invalid-feedback">
+											{{$message}}
+										  </div>
+										@enderror
 									</div>
 								</div>
 								<!-- Password -->
 								<div class="mb-4">
-									<label for="inputPassword5" class="form-label">Password *</label>
+									<label for="inputPassword5" class="form-label">Password</label>
 									<div class="input-group input-group-lg">
 										<span class="input-group-text bg-light rounded-start border-0 text-secondary px-3"><i class="fas fa-lock"></i></span>
-										<input type="password" class="form-control border-0 bg-light rounded-end ps-1" placeholder="*********" id="inputPassword5">
+										<input type="password" class="form-control border-0 bg-light rounded-end ps-1 @error('password') is-invalid @enderror " name="password" placeholder="*********" id="inputPassword5" >
+										@error('password')
+										<div class="invalid-feedback">
+											{{$message}}
+										  </div>
+										@enderror
 									</div>
 								</div>
 								<!-- Confirm Password -->
-								<div class="mb-4">
+								{{-- <div class="mb-4">
 									<label for="inputPassword6" class="form-label">Confirm Password *</label>
 									<div class="input-group input-group-lg">
 										<span class="input-group-text bg-light rounded-start border-0 text-secondary px-3"><i class="fas fa-lock"></i></span>
 										<input type="password" class="form-control border-0 bg-light rounded-end ps-1" placeholder="*********" id="inputPassword6">
 									</div>
-								</div>
+								</div> --}}
 								<!-- Check box -->
 								<div class="mb-4">
 									<div class="form-check">
 										<input type="checkbox" class="form-check-input" id="checkbox-1">
-										<label class="form-check-label" for="checkbox-1">By signing up, you agree to the<a href="#"> terms of service</a></label>
+										<label class="form-check-label" for="checkbox-1">Saya Menyetujui<a href="#"> Syarat & Ketentuan Santri Hub</a></label>
 									</div>
 								</div>
 								<!-- Button -->
 								<div class="align-items-center mt-0">
 									<div class="d-grid">
-										<button class="btn btn-primary mb-0" type="button">Sign Up</button>
+										<button class="btn btn-primary mb-0"  type="submit">Register</button>
 									</div>
 								</div>
 							</form>
 							<!-- Form END -->
 
 							<!-- Social buttons -->
-							<div class="row">
+							<div class="row" hidden>
 								<!-- Divider with text -->
 								<div class="position-relative my-4">
 									<hr>
@@ -117,7 +141,7 @@
 
 							<!-- Sign up link -->
 							<div class="mt-4 text-center">
-								<span>Already have an account?<a href="sign-in.html"> Sign in here</a></span>
+								<span>Anda sudah mempunyai akun ?<a href="{{url('login')}}"> Masuk sekarang</a></span>
 							</div>
 						</div>
 					</div>
