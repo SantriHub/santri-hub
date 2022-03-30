@@ -3,5 +3,5 @@ RewriteEngine on
 RewriteRule ^$ public/ [L]
 RewriteRule (.*) public/$1 [L]
 RewriteCond %{SERVER_PORT} ^443$
-RewriteRule (.*) https://dev-santrihub.herokuapp.com/$1
+RewriteRule (.*) http://dev-santrihub.herokuapp.com/$1
 </IfModule>
