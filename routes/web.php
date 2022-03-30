@@ -18,25 +18,40 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/login', [LoginController::class, 'index']);
-Route::get('/register', [RegisterController::class, 'index']);
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'create']);
+
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::get('/logout', [LoginController::class, 'logout']);
+
 
 // Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/dashboard/mentor', function () {
-    return view('pages.dashboard-mentor');
-});
-
-Route::get('/dashboard/member', function () {
-    return view('pages.dashboard-member');
-});
-
+/**
+ * Mentor
+ */
 Route::get('/kampus/itb/list-mentor', function () {
     return view('pages.mentor.list-mentor');
 });
 Route::get('/kampus/itb/ahmad-fulan', function () {
     return view('pages.mentor.detail-mentor');
 });
+
+Route::get('/dashboard/mentor', function () {
+    return view('pages.mentor.dashboard-mentor');
+})->middleware(['auth']);
+
+
+/**
+ * Member
+ */
+
+Route::get('/dashboard/member', function () {
+    return view('pages.member.dashboard-member');
+})->middleware(['auth']);
+
+/**
+ * Admin
+ */
