@@ -65,27 +65,40 @@
 							<!-- Title -->
 							<span class="mb-0 fs-1">👋</span>
 							<h1 class="fs-2">Login Santri Hub </h1>
-							<p class="lead mb-4">Nice to see you! Please log in with your account.</p>
-
+							@if (session()->has('loginError'))
+							<div class="alert alert-danger d-flex align-items-center" role="alert">
+								<div>
+								 {{session('loginError')}}
+								</div>
+							  </div>
+						@endif
 							<!-- Form START -->
-							<form>
+							<form action="/login" method="POST">
+								@csrf
 								<!-- Email -->
 								<div class="mb-4">
-									<label for="exampleInputEmail1" class="form-label">Email *</label>
+									<label for="exampleInputEmail1" class="form-label">Email</label>
 									<div class="input-group input-group-lg">
 										<span class="input-group-text bg-light rounded-start border-0 text-secondary px-3"><i class="bi bi-envelope-fill"></i></span>
-										<input type="email" class="form-control border-0 bg-light rounded-end ps-1" placeholder="E-mail" id="exampleInputEmail1">
+										<input type="email" name="email" class="form-control border-0 bg-light rounded-end ps-1 @error('email') is-invalid @enderror" placeholder="E-mail" id="email" required>
+										@error('email')
+										<div class="invalid-feedback">
+											{{$message}}
+										  </div>
+										@enderror
 									</div>
 								</div>
 								<!-- Password -->
 								<div class="mb-4">
-									<label for="inputPassword5" class="form-label">Password *</label>
+									<label for="inputPassword5" class="form-label">Password</label>
 									<div class="input-group input-group-lg">
 										<span class="input-group-text bg-light rounded-start border-0 text-secondary px-3"><i class="fas fa-lock"></i></span>
-										<input type="password" class="form-control border-0 bg-light rounded-end ps-1" placeholder="password" id="inputPassword5">
-									</div>
-									<div id="passwordHelpBlock" class="form-text">
-										Your password must be 8 characters at least 
+										<input type="password" name="password" class="form-control border-0 bg-light rounded-end ps-1 @error('password') is-invalid @enderror " placeholder="password" id="password" required>
+										@error('password')
+										<div class="invalid-feedback">
+											{{$message}}
+										  </div>
+										@enderror
 									</div>
 								</div>
 								<!-- Check box -->
