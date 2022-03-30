@@ -61,10 +61,10 @@
                         </li>
                         @if (!Auth::user())
                         <li class="nav-item dropdown  dropdown-menu-shadow-stacked" style="margin-left: 5px">
-                            <a class="nav-link border border-primary rounded text-black px-3 py-3 py-xl-0" href="/login"><span>Login</span></a>
+                            <a class="nav-link border border-primary rounded text-black px-3 py-3 py-xl-0" href="{{url('login')}}"><span>Login</span></a>
                         </li>
                         <li class="nav-item dropdown dropdown-menu-shadow-stacked " style="margin-left: 5px">
-                            <a class="nav-link bg-primary bg-opacity-9 rounded-3 text-white px-3 py-3 py-xl-0" href="/register" id="categoryMenu" aria-haspopup="true" aria-expanded="false"><span>Register</span></a>
+                            <a class="nav-link bg-primary bg-opacity-9 rounded-3 text-white px-3 py-3 py-xl-0" href="{{url('register')}}" id="categoryMenu" aria-haspopup="true" aria-expanded="false"><span>Register</span></a>
                         </li>
                         @endif
                     </li>
