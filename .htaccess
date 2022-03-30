@@ -1,7 +1,0 @@
-<IfModule mod_rewrite.c>
-RewriteEngine on
-RewriteRule ^$ public/ [L]
-RewriteRule (.*) public/$1 [L]
-RewriteCond %{SERVER_PORT} ^443$
-RewriteRule (.*) http://dev-santrihub.herokuapp.com/$1
-</IfModule>
