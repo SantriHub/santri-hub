@@ -4,8 +4,8 @@
             <div class="container-fluid px-3 px-xl-5">
                 <!-- Logo START -->
                 <a class="navbar-brand" href="index.html">
-                    <img class="light-mode-item navbar-brand-item" src="{{ url('template/assets/images/logo.svg')}}" alt="logo">
-                    <img class="dark-mode-item navbar-brand-item" src="{{ url('template/assets/images/logo-light.svg')}}" alt="logo">
+                    <img class="light-mode-item navbar-brand-item" src="{{ url('template/assets/images/logo.png')}}" alt="logo">
+                    <img class="dark-mode-item navbar-brand-item" src="{{ url('template/assets/images/logo-light.png')}}" alt="logo">
                 </a>
                 <!-- Logo END -->
 
@@ -99,12 +99,12 @@
                         <hr>
                     </li>
                     <!-- Links -->
-                    @if (Auth::user()->roles === 'Student')
+                    @if (Auth::user()->roles === 'MEMBER')
                         <li><a class="dropdown-item" href="/dashboard/member"><i class="bi bi-border-all fa-fw me-2"></i>Dashboard</a></li>
-                    @elseif (Auth::user()->roles === 'Mentor')
+                    @elseif (Auth::user()->roles === 'MENTOR')
                         <li><a class="dropdown-item" href="/dashboard/mentor"><i class="bi bi-border-all fa-fw me-2"></i>Dashboard</a></li>
                     @else
-                        <li><a class="dropdown-item" href="/dashboard/admin"><i class="bi bi-border-all fa-fw me-2"></i>Dashboard</a></li>
+                        <li><a class="dropdown-item" href="{{route('dashboard')}}"><i class="bi bi-border-all fa-fw me-2"></i>Dashboard</a></li>
                     @endif
                     <li><a class="dropdown-item" href="#"><i class="bi bi-person fa-fw me-2"></i>Edit Profil</a></li>
                     <li><a class="dropdown-item bg-danger-soft-hover" href="{{ url('/logout') }}"><i class="bi bi-power fa-fw me-2"></i>Keluar</a></li>
