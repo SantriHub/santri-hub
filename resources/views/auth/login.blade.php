@@ -18,14 +18,14 @@
 	 <link rel="preconnect" href="https://fonts.googleapis.com">
 	 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
-	
+
 	 <!-- Plugins CSS -->
 	 <link rel="stylesheet" type="text/css" href="{{ asset('template/assets/vendor/font-awesome/css/all.min.css')}}">
 	 <link rel="stylesheet" type="text/css" href="{{ asset('template/assets/vendor/bootstrap-icons/bootstrap-icons.css')}}">
 	 <link rel="stylesheet" type="text/css" href="{{ asset('template/assets/vendor/tiny-slider/tiny-slider.css')}}">
 	 <link rel="stylesheet" type="text/css" href="{{ asset('template/assets/vendor/glightbox/css/glightbox.css')}}">
 	 <link rel="stylesheet" type="text/css" href="{{ asset('template/assets/vendor/apexcharts/css/apexcharts.css')}}">
-	
+
 	 <!-- Theme CSS -->
 	 <link id="style-switch" rel="stylesheet" type="text/css" href="{{ asset('template/assets/css/style.css')}}">
 
@@ -36,7 +36,7 @@
 <!-- **************** MAIN CONTENT START **************** -->
 <main>
 	<section class="p-0 d-flex align-items-center position-relative overflow-hidden">
-	
+
 		<div class="container-fluid">
 			<div class="row">
 				<!-- left -->
@@ -44,7 +44,7 @@
 					<div class="p-3 p-lg-5">
 						<!-- Title -->
 						<div class="text-center">
-							<h2 class="fw-bold">Welcome to our largest community</h2>
+							<h2 class="fw-bold">Welcome to SantriHub</h2>
 							<p class="mb-0 h6 fw-light">Let's learn something new today!</p>
 						</div>
 						<!-- SVG Image -->
