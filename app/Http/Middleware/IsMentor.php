@@ -17,7 +17,7 @@ class IsMentor
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::user() && Auth::user()->role === "MENTOR") {
+        if (Auth::user() && Auth::user()->roles === "MENTOR") {
             return $next($request);
         }
         // return $next($request);

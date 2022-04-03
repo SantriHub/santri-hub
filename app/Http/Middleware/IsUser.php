@@ -17,7 +17,7 @@ class IsUser
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::user() && Auth::user()->role === "MENTOR") {
+        if (Auth::user() && Auth::user()->roles === "MEMBER") {
             return $next($request);
         }
         return redirect('/');
