@@ -18,14 +18,14 @@
 	 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
 	
 	 <!-- Plugins CSS -->
-	 <link rel="stylesheet" type="text/css" href="{{ secure_asset('template/assets/vendor/font-awesome/css/all.min.css')}}">
-	 <link rel="stylesheet" type="text/css" href="{{ secure_asset('template/assets/vendor/bootstrap-icons/bootstrap-icons.css')}}">
-	 <link rel="stylesheet" type="text/css" href="{{ secure_asset('template/assets/vendor/tiny-slider/tiny-slider.css')}}">
-	 <link rel="stylesheet" type="text/css" href="{{ secure_asset('template/assets/vendor/glightbox/css/glightbox.css')}}">
-	 <link rel="stylesheet" type="text/css" href="{{ secure_asset('template/assets/vendor/apexcharts/css/apexcharts.css')}}">
+	 <link rel="stylesheet" type="text/css" href="{{ asset('template/assets/vendor/font-awesome/css/all.min.css')}}">
+	 <link rel="stylesheet" type="text/css" href="{{ asset('template/assets/vendor/bootstrap-icons/bootstrap-icons.css')}}">
+	 <link rel="stylesheet" type="text/css" href="{{ asset('template/assets/vendor/tiny-slider/tiny-slider.css')}}">
+	 <link rel="stylesheet" type="text/css" href="{{ asset('template/assets/vendor/glightbox/css/glightbox.css')}}">
+	 <link rel="stylesheet" type="text/css" href="{{ asset('template/assets/vendor/apexcharts/css/apexcharts.css')}}">
 	
 	 <!-- Theme CSS -->
-	 <link id="style-switch" rel="stylesheet" type="text/css" href="{{ secure_asset('template/assets/css/style.css')}}">
+	 <link id="style-switch" rel="stylesheet" type="text/css" href="{{ asset('template/assets/css/style.css')}}">
 </head>
 
 <body>
@@ -166,15 +166,15 @@
 <!-- **************** MAIN CONTENT END **************** -->
 
 <!-- Back to top -->
-<script src="{{ secure_asset('template/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{ asset('template/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
 
 <!-- Vendors -->
-<script src="{{ secure_asset('template/assets/vendor/tiny-slider/tiny-slider.js')}}"></script>
-<script src="{{ secure_asset('template/assets/vendor/glightbox/js/glightbox.js')}}"></script>
-<script src="{{ secure_asset('template/assets/vendor/purecounterjs/dist/purecounter_vanilla.js')}}"></script>
-<script src="{{ secure_asset('template/assets/vendor/apexcharts/js/apexcharts.min.js')}}"></script>
+<script src="{{ asset('template/assets/vendor/tiny-slider/tiny-slider.js')}}"></script>
+<script src="{{ asset('template/assets/vendor/glightbox/js/glightbox.js')}}"></script>
+<script src="{{ asset('template/assets/vendor/purecounterjs/dist/purecounter_vanilla.js')}}"></script>
+<script src="{{ asset('template/assets/vendor/apexcharts/js/apexcharts.min.js')}}"></script>
 <!-- Template Functions -->
-<script src="{{ secure_asset('template/assets/js/functions.js')}}"></script>
+<script src="{{ asset('template/assets/js/functions.js')}}"></script>
 
 </body>
 </html>
