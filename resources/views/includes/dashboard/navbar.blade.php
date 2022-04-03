@@ -3,7 +3,7 @@
 	<nav class="navbar navbar-expand-xl">
 		<div class="container-fluid px-3 px-xl-5">
 			<!-- Logo START -->
-			<a class="navbar-brand" href="index.html">
+			<a class="navbar-brand" href="{{url('/')}}">
 				<img class="light-mode-item navbar-brand-item" src="{{ url('template/assets/images/logo.svg')}}" alt="logo">
 				<img class="dark-mode-item navbar-brand-item" src="{{ url('template/assets/images/logo-light.svg')}}" alt="logo">
 			</a>
@@ -56,7 +56,9 @@
 					</li>
 
 					<!-- Nav item 5 link-->
-					<a class="nav-link" href="#"  aria-expanded="false">Blog</a>
+					<li class="nav-item dropdown dropdown-fullwidth">
+						<a class="nav-link" href="#"  aria-expanded="false">Blog</a>
+					</li>
 				</li>
 				</ul>
 				<!-- Nav Main menu END -->
@@ -89,7 +91,7 @@
 					<li><a class="dropdown-item" href="#"><i class="bi bi-person fa-fw me-2"></i>Edit Profile</a></li>
 					<li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Account Settings</a></li>
 					<li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help</a></li>
-					<li><a class="dropdown-item bg-danger-soft-hover" href="#"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
+					<li><a class="dropdown-item bg-danger-soft-hover" href="/logout"><i class="bi bi-power fa-fw me-2"></i>Keluar</a></li>
 					<li>
 						<hr class="dropdown-divider">
 					</li>
