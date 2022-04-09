@@ -1,0 +1,17 @@
+Materi UTBK
+Tes Potensial Skolastik
+	Pemahaman Bacaan & Menulis
+	Pengetahuan & Pemahaman Umum
+	Pengetahuan Kuantitatif
+	Bahasa Inggris
+	Penalaran Umum
+Tes Kemampuan Akademik SAINTEK
+	Matematika
+	Fisika
+	Biologi
+	Kimia
+Tes Kemampuan Akademik SOSHUM
+	Sejarah
+	Sosiologi
+	Geografi
+	Ekonomi
