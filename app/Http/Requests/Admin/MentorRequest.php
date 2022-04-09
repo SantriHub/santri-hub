@@ -13,7 +13,7 @@ class MentorRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,12 @@ class MentorRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'user_id' => 'required',
+            'college_id' => 'required',
+            'mentor_name' => 'required |string|min:8',
+            'short_description' => 'required | string| min:8',
+            'active' => 'required',
+
         ];
     }
 }
