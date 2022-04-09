@@ -45,4 +45,9 @@ class College extends Model
     {
         return $this->belongsTo(City::class, 'city_id', 'id');
     }
+
+    public function mentor()
+    {
+        return $this->hasMany(Mentor::class);
+    }
 }
