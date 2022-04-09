@@ -37,22 +37,26 @@
                         @csrf
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Mentor Name</label>
-                            <input type="text" class="form-control" name="country_name" id="exampleFormControlInput1" placeholder="Input Country Name" required>
+                            <input type="text" class="form-control" name="mentor_name" id="exampleFormControlInput1" placeholder="Input Mentor Name" required>
                           </div>
                           <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">User</label>
                             <select name="user_id" class="form-select" aria-label="Default select example" required>
-                                <option value="">Option</option>
-                                <option value="1">Active</option>
-                                <option value="0">Inactive</option>
+                                @forelse ($users as $user)
+                                <option value="{{$user->id}}">{{$user->name}}</option>
+                                @empty
+                                <p>Tidak ada data</p>
+                                @endforelse
                               </select>                         
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">College</label>
                             <select name="college_id" class="form-select" aria-label="Default select example" required>
-                                <option value="">Option</option>
-                                <option value="1">Active</option>
-                                <option value="0">Inactive</option>
+                                @forelse ($colleges as $college)
+                                <option value="{{$college->id}}">{{$college->college_name}}</option>
+                                @empty
+                                <p>Tidak ada data</p>
+                                @endforelse
                               </select>                         
                         </div>
                         <div class="mb-3">
@@ -67,7 +71,7 @@
                                 <option value="0">Inactive</option>
                               </select>
                         </div>
-                          <button type="submit" class="btn btn-primary">Add Country</button>
+                          <button type="submit" class="btn btn-primary">Add Mentor</button>
                        </form>
                     </div>
                     <!-- Table END -->

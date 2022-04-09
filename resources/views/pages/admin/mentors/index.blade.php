@@ -19,6 +19,13 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
         @endif
+
+        @if ($message = Session::get('error'))
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          {{$message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        @endif
     </div>
 
     <!-- Card START -->
@@ -65,6 +72,7 @@
                             <!-- Table body START -->
                             <tbody>
                                 <!-- Table row -->
+                                @forelse ($items as $item)
                                 <tr>
                                     <!-- Table data -->
                                     <td>
@@ -75,25 +83,26 @@
                                             </div>
                                             <div class="mb-0 ms-2">
                                                 <!-- Title -->
-                                                <h6 class="mb-0"><a href="#" class="stretched-link">Lori Stevens</a></h6>
+                                                <h6 class="mb-0"><a href="#" class="stretched-link">{{$item->mentor_name}}</a></h6>
                                             </div>
                                         </div>
                                     </td>
 
                                     <!-- Table data -->
                                     <td class="text-center text-sm-start">
-                                        <h6 class="mb-0">Web Designer</h6>
+                                        <h6 class="mb-0">{{$item->college->country->country_name}}</h6>
                                     </td>
 
                                     <!-- Table data -->
-                                    <td>15</td>
+                                    <td>{{$item->college->city->city_name}}</td>
 
                                     <!-- Table data -->
-                                    <td>5,354</td>
+                                    <td>{{$item->college->college_name}}</td>
 
                                         <!-- Table data -->
-                                    <td>Active</td>
-
+                                    <td>
+                                        <h6 class="mb-0">{{$item->active === 1 ? 'Active' : 'Inactive'}}</h6>
+                                    </td>
                                     <!-- Table data -->
                                     <td>
                                         <a href="#" class="btn btn-success-soft btn-round me-1 mb-1 mb-md-0" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
@@ -104,6 +113,12 @@
                                         </button>
                                     </td>
                                 </tr>
+                                @empty
+                                <td colspan="7" class="text-center">
+                                    Data Kosong
+                                </td>
+                                @endforelse
+                                
                             </tbody>
                             <!-- Table body END -->
                         </table>
