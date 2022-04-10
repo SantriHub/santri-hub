@@ -84,9 +84,10 @@
                             <label for="exampleFormControlTextarea1" class="form-label">College Status</label>
                             <select name="college_status" class="form-select" aria-label="Default select example" required>
                                 <option value="">Option</option>
-                                <option value="draft">Draft</option>
-                                <option value="publish">Publish</option>
-                              </select>
+                                <option value="PTN">PTN</option>
+                                <option value="PTS">PTS</option>
+                                <option value="LN">LN</option>
+                            </select>
                           </div>
                           <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">Status Active</label>

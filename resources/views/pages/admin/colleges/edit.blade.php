@@ -51,9 +51,12 @@
                           <div class="mb-3">
                               <label for="exampleFormControlTextarea1" class="form-label">Country Name</label>
                               <select name="country_id" class="form-select" aria-label="Default select example" required>
-                               <option value="">Option</option>
                                @forelse ($countries as $itemCountry)
-                                   <option value="{{ $itemCountry->id}}">{{ $itemCountry->country_name}}</option>
+                                   <option value="{{ $itemCountry->id}}"
+                                        @if($item->country_id == $itemCountry->id)
+                                            selected
+                                        @endif
+                                    >{{ $itemCountry->country_name}}</option>
                                @empty
                                <option value="">Tidak ada data</option>
                                @endforelse
@@ -62,21 +65,27 @@
                           <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">State Name</label>
                             <select name="state_id" class="form-select" aria-label="Default select example" required>
-                                <option value="">Option</option>
-                                @forelse ($states as $itemStates)
-                                    <option value="{{ $itemStates->id}}">{{ $itemStates->state_name}}</option>
+                                @forelse ($states as $itemState)
+                                    <option value="{{ $itemState->id}}"
+                                        @if($item->state_id == $itemState->id)
+                                            selected
+                                        @endif
+                                    >{{ $itemState->state_name}}</option>
                                 @empty
                                 <option value="">Tidak ada data</option>
                                 @endforelse
-                           
+
                               </select>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">City Name</label>
                             <select name="city_id" class="form-select" aria-label="Default select example" required>
-                                <option value="">Option</option>
                                 @forelse ($cities as $itemCity)
-                                    <option value="{{ $itemCity->id}}">{{ $itemCity->city_name}}</option>
+                                    <option value="{{ $itemCity->id}}"
+                                        @if($item->city_id == $itemCity->id)
+                                            selected
+                                        @endif
+                                    >{{ $itemCity->city_name}}</option>
                                 @empty
                                 <option value="">Tidak ada data</option>
                                 @endforelse
@@ -85,13 +94,19 @@
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">College Status</label>
                             <select name="college_status" class="form-select" aria-label="Default select example" required>
-                                @if ($item->college_status == 'draft')
-                                <option value="draft" >Draft</option>
-                                <option value="publish" >Publish</option>
-                            @else
-                                <option value="publish" >Publish</option>
-                                <option value="draft">Draft</option>
-                            @endif
+                                @if ($item->college_status == 'PTN')
+                                    <option value="PTN">PTN</option>
+                                    <option value="PTS">PTS</option>
+                                    <option value="LN">LN</option>
+                                @elseif ($item->college_status == 'PTS')
+                                    <option value="PTS">PTS</option>
+                                    <option value="PTN">PTN</option>
+                                    <option value="LN">LN</option>
+                                @else
+                                    <option value="LN">LN</option>
+                                    <option value="PTS">PTS</option>
+                                    <option value="PTN">PTN</option>
+                                @endif
                               </select>
                           </div>
                           <div class="mb-3">
