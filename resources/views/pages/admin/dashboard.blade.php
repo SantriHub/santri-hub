@@ -1,6 +1,6 @@
 @extends('layouts.admin_dashboard')
 @section('title')
-    Santri Hub | Member
+    Santri Hub | Admin
 @endsection
 
 @section('content')
