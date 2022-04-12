@@ -53,8 +53,19 @@
 				{{-- <li class="nav-item"> <a class="nav-link" href="admin-setting.html"><i class="fas fa-user-cog fa-fw me-2"></i>Admin Settings</a></li> --}}
 
 				<!-- Title -->
-				{{-- <li class="nav-item ms-2 my-2">Documentation</li> --}}
+				<li class="nav-item ms-2 my-2">Try Out</li>
 
+				<li class="nav-item">
+					<a class="nav-link" data-bs-toggle="collapse" href="#collapsepageDataTryOut" role="button" aria-expanded="false" aria-controls="collapsepageData">
+						<i class="bi bi-menu-button-wide fa-fw me-2"></i>Master Try Out
+					</a>
+					<!-- Submenu -->
+					<ul class="nav collapse flex-column" id="collapsepageDataTryOut" data-bs-parent="#navbar-sidebar">
+						<li class="nav-item"> <a class="nav-link" href="{{route('countries.index')}}">Category Try Out</a></li>
+						<li class="nav-item"> <a class="nav-link" href="{{route('countries.index')}}">Section</a></li>
+						<li class="nav-item"> <a class="nav-link" href="{{route('states.index')}}">Package</a></li>
+					</ul>
+				</li>
 				<!-- Menu item 9 -->
 				{{-- <li class="nav-item"> <a class="nav-link" href="docs/index.html"><i class="far fa-clipboard fa-fw me-2"></i>Documentation</a></li> --}}
 
