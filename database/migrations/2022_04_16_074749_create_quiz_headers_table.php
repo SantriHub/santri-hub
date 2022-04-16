@@ -21,6 +21,7 @@ class CreateQuizHeadersTable extends Migration
             $table->unsignedInteger('quiz_size');
             $table->text('questions_taken')->nullable()->default(null);
             $table->double('score', 2)->default(0);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

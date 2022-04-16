@@ -17,7 +17,6 @@ class CreateCategoryTryoutsTable extends Migration
             $table->bigIncrements('id');
             $table->foreignId('user_id');
             $table->string('category_tryout_name');
-            $table->string('description');
             $table->enum('is_active', ['0', '1'])->default('1');
             $table->softDeletes();
             $table->timestamps();

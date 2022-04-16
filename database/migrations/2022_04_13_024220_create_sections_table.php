@@ -21,6 +21,7 @@ class CreateSectionsTable extends Migration
             $table->string('description');
             $table->enum('is_active', ['0', '1'])->default('1');
             $table->text('details');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
