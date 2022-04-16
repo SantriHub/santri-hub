@@ -13,8 +13,12 @@ class CreateAnswersTable extends Migration
      */
     public function up()
     {
-        Schema::table('answers', function (Blueprint $table) {
-            //
+        Schema::create('answers', function (Blueprint $table) {
+            $table->id();
+            $table->string('answer');
+            $table->enum('is_checked', ['0', '1'])->default('0');
+            $table->foreignId('question_id')->constrained()->onDelete('cascade');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +29,6 @@ class CreateAnswersTable extends Migration
      */
     public function down()
     {
-        Schema::table('answers', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('answers');
     }
 }

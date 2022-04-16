@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCategoryTryouts extends Migration
+class CreateQuestionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateCategoryTryouts extends Migration
      */
     public function up()
     {
-        Schema::table('category_tryouts', function (Blueprint $table) {
+        Schema::create('questions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('name');
-            $table->string('description');
+            $table->string('question');
+            $table->text('explanation');
             $table->enum('is_active', ['0', '1'])->default('1');
+            $table->foreignId('section_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -31,8 +32,6 @@ class CreateCategoryTryouts extends Migration
      */
     public function down()
     {
-        Schema::table('category_tryouts', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('questions');
     }
 }
